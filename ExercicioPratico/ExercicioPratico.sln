@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExercicioPratico.Services.API", "ExercicioPratico.Services.API\ExercicioPratico.Services.API.csproj", "{9BA55DCC-0AFB-4537-BFB0-54D9AD54F0E3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Presentation", "1 - Presentation", "{A30910F9-422B-4202-B6E7-A49B138B5989}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{3121C05A-9625-414E-9841-B2FFDD3DC71A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{F3FF9AC4-647F-4CD0-B9D3-D25D4862E3C7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - InfraStructure", "4 - InfraStructure", "{D581BC39-0D82-4F58-AABF-AA592B03E981}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExercicioPratico.Domain", "ExercicioPratico.Domain\ExercicioPratico.Domain.csproj", "{97B1E4AC-67CD-4973-921E-34FAC605D1EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExercicioPratico.Infra.Data", "ExercicioPratico.Infra.Data\ExercicioPratico.Infra.Data.csproj", "{81E0253E-4F4B-42FA-A28F-009D9E571E9E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9BA55DCC-0AFB-4537-BFB0-54D9AD54F0E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BA55DCC-0AFB-4537-BFB0-54D9AD54F0E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BA55DCC-0AFB-4537-BFB0-54D9AD54F0E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BA55DCC-0AFB-4537-BFB0-54D9AD54F0E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97B1E4AC-67CD-4973-921E-34FAC605D1EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97B1E4AC-67CD-4973-921E-34FAC605D1EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97B1E4AC-67CD-4973-921E-34FAC605D1EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97B1E4AC-67CD-4973-921E-34FAC605D1EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81E0253E-4F4B-42FA-A28F-009D9E571E9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81E0253E-4F4B-42FA-A28F-009D9E571E9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81E0253E-4F4B-42FA-A28F-009D9E571E9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81E0253E-4F4B-42FA-A28F-009D9E571E9E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9BA55DCC-0AFB-4537-BFB0-54D9AD54F0E3} = {A30910F9-422B-4202-B6E7-A49B138B5989}
+		{97B1E4AC-67CD-4973-921E-34FAC605D1EA} = {F3FF9AC4-647F-4CD0-B9D3-D25D4862E3C7}
+		{81E0253E-4F4B-42FA-A28F-009D9E571E9E} = {D581BC39-0D82-4F58-AABF-AA592B03E981}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F5C00269-EE32-4719-9A6B-EBA31E85E318}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,15 @@
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Data\bin\Debug\netcoreapp3.1\ExercicioPratico.Infra.Data.deps.json
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Data\bin\Debug\netcoreapp3.1\ExercicioPratico.Infra.Data.dll
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Data\obj\Debug\netcoreapp3.1\ExercicioPratico.Infra.Data.csprojAssemblyReference.cache
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Data\obj\Debug\netcoreapp3.1\ExercicioPratico.Infra.Data.AssemblyInfoInputs.cache
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Data\obj\Debug\netcoreapp3.1\ExercicioPratico.Infra.Data.AssemblyInfo.cs
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Data\bin\Debug\netcoreapp3.1\ExercicioPratico.Infra.Data.runtimeconfig.json
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Data\bin\Debug\netcoreapp3.1\ExercicioPratico.Infra.Data.runtimeconfig.dev.json
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Data\obj\Debug\netcoreapp3.1\ExercicioPratico.Infra.Data.genruntimeconfig.cache
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Data\bin\Debug\netcoreapp3.1\ExercicioPratico.Infra.Data.pdb
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Data\bin\Debug\netcoreapp3.1\ExercicioPratico.Domain.dll
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Data\bin\Debug\netcoreapp3.1\ExercicioPratico.Domain.pdb
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Data\obj\Debug\netcoreapp3.1\ExercicioPratico.Infra.Data.csproj.CoreCompileInputs.cache
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Data\obj\Debug\netcoreapp3.1\ExercicioPratico.Infra.Data.csproj.CopyComplete
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Data\obj\Debug\netcoreapp3.1\ExercicioPratico.Infra.Data.dll
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Data\obj\Debug\netcoreapp3.1\ExercicioPratico.Infra.Data.pdb
