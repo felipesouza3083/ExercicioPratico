@@ -1,0 +1,2 @@
+# ExercicioPratico
+Projeto de Estudo
