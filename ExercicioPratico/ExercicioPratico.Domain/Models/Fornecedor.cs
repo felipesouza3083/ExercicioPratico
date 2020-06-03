@@ -13,8 +13,6 @@ namespace ExercicioPratico.Domain.Models
         public string Email { get; set; }
         public string Telefone { get; set; }
 
-        public IList<Produto> Produtos { get; set; }
-
         public Fornecedor()
         {
 
@@ -29,5 +27,11 @@ namespace ExercicioPratico.Domain.Models
             Email = email;
             Telefone = telefone;
         }
+
+        #region Produtos
+
+        public List<Produto> Produtos { get; set; }
+
+        #endregion
     }
 }

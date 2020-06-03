@@ -2,8 +2,8 @@ C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Domain\bin\De
 C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Domain\bin\Debug\netcoreapp3.1\ExercicioPratico.Domain.dll
 C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Domain\bin\Debug\netcoreapp3.1\ExercicioPratico.Domain.pdb
 C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Domain\obj\Debug\netcoreapp3.1\ExercicioPratico.Domain.csprojAssemblyReference.cache
-C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Domain\obj\Debug\netcoreapp3.1\ExercicioPratico.Domain.csproj.CoreCompileInputs.cache
 C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Domain\obj\Debug\netcoreapp3.1\ExercicioPratico.Domain.AssemblyInfoInputs.cache
 C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Domain\obj\Debug\netcoreapp3.1\ExercicioPratico.Domain.AssemblyInfo.cs
 C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Domain\obj\Debug\netcoreapp3.1\ExercicioPratico.Domain.dll
 C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Domain\obj\Debug\netcoreapp3.1\ExercicioPratico.Domain.pdb
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Domain\obj\Debug\netcoreapp3.1\ExercicioPratico.Domain.csproj.CoreCompileInputs.cache

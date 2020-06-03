@@ -13,26 +13,34 @@ namespace ExercicioPratico.Domain.Models
         public decimal Preco { get; set; }
         public int Quantidade { get; set; }
         public DateTime DataCompra { get; set; }
-        public Guid CategoriaId { get; set; }
-        public Guid FornecedorId { get; set; }
-
-        public Categoria Categoria { get; set; }
-        public Fornecedor Fornecedor { get; set; }
 
         public Produto()
         {
 
         }
 
-        public Produto(Guid id, string nome, decimal preco, int quantidade, DateTime dataCompra, Guid categoriaId, Guid fornecedorId)
+        public Produto(Guid id, string nome, decimal preco, int quantidade, DateTime dataCompra)
         {
             Id = id;
             Nome = nome;
             Preco = preco;
             Quantidade = quantidade;
             DataCompra = dataCompra;
-            CategoriaId = categoriaId;
-            FornecedorId = fornecedorId;
         }
+
+        #region Fornecedor
+
+        public Guid FornecedorId { get; set; }
+        public Fornecedor Fornecedor { get; set; }
+
+        #endregion
+
+        #region Categoria
+
+        public Guid CategoriaId { get; set; }
+        public Categoria Categoria { get; set; }
+
+
+        #endregion
     }
 }

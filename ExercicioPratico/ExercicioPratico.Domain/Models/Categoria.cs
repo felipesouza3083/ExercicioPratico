@@ -10,8 +10,6 @@ namespace ExercicioPratico.Domain.Models
         public string Nome { get; set; }
         public string Descricao { get; set; }
 
-        public IList<Produto> Produtos { get; set; }
-
         public Categoria()
         {
 
@@ -23,5 +21,11 @@ namespace ExercicioPratico.Domain.Models
             Nome = nome;
             Descricao = descricao;
         }
+
+        #region Produtos
+
+        public List<Produto> Produtos { get; set; }
+
+        #endregion
     }
 }
