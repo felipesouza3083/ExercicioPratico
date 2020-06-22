@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ExercicioPratico.Application.Commands.Produtos;
+using ExercicioPratico.Application.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,22 +13,58 @@ namespace ExercicioPratico.Services.API.Controllers
     [ApiController]
     public class ProdutoController : ControllerBase
     {
-        [HttpPost]
-        public IActionResult Post()
+        private readonly IProdutoApplicationService produtoApplicationService;
+
+        public ProdutoController(IProdutoApplicationService produtoApplicationService)
         {
-            return Ok();
+            this.produtoApplicationService = produtoApplicationService;
+        }
+
+        [HttpPost]
+        public IActionResult Post(CreateProdutoCommand command)
+        {
+            try
+            {
+                produtoApplicationService.Add(command);
+
+                return Ok(new { Message = "Produto cadastrado com sucesso" });
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
         }
 
         [HttpPut]
-        public IActionResult Put()
+        public IActionResult Put(UpdateProdutoCommand command)
         {
-            return Ok();
+            try
+            {
+                produtoApplicationService.Update(command);
+
+                return Ok(new { Message = "Produto ataulizado com sucesso" });
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
         }
 
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public IActionResult Delete(string id)
         {
-            return Ok();
+            try
+            {
+                var command = new DeleteProdutoCommand { Id = id };
+
+                produtoApplicationService.Remove(command);
+
+                return Ok(new { Message = "Produto excluído com sucesso" });
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
         }
 
         [HttpGet]

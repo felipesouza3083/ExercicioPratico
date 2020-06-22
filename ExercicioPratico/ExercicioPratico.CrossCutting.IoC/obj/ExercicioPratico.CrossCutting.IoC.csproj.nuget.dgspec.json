@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Git_Projects\\ExercicioPratico\\ExercicioPratico\\ExercicioPratico.Services.API\\ExercicioPratico.Services.API.csproj": {}
+    "C:\\Git_Projects\\ExercicioPratico\\ExercicioPratico\\ExercicioPratico.CrossCutting.IoC\\ExercicioPratico.CrossCutting.IoC.csproj": {}
   },
   "projects": {
     "C:\\Git_Projects\\ExercicioPratico\\ExercicioPratico\\ExercicioPratico.Application\\ExercicioPratico.Application.csproj": {
@@ -288,89 +288,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Git_Projects\\ExercicioPratico\\ExercicioPratico\\ExercicioPratico.Services.API\\ExercicioPratico.Services.API.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Git_Projects\\ExercicioPratico\\ExercicioPratico\\ExercicioPratico.Services.API\\ExercicioPratico.Services.API.csproj",
-        "projectName": "ExercicioPratico.Services.API",
-        "projectPath": "C:\\Git_Projects\\ExercicioPratico\\ExercicioPratico\\ExercicioPratico.Services.API\\ExercicioPratico.Services.API.csproj",
-        "packagesPath": "C:\\Users\\felipe.souza\\.nuget\\packages\\",
-        "outputPath": "C:\\Git_Projects\\ExercicioPratico\\ExercicioPratico\\ExercicioPratico.Services.API\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\felipe.souza\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netcoreapp3.1"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netcoreapp3.1": {
-            "projectReferences": {
-              "C:\\Git_Projects\\ExercicioPratico\\ExercicioPratico\\ExercicioPratico.Application\\ExercicioPratico.Application.csproj": {
-                "projectPath": "C:\\Git_Projects\\ExercicioPratico\\ExercicioPratico\\ExercicioPratico.Application\\ExercicioPratico.Application.csproj"
-              },
-              "C:\\Git_Projects\\ExercicioPratico\\ExercicioPratico\\ExercicioPratico.CrossCutting.IoC\\ExercicioPratico.CrossCutting.IoC.csproj": {
-                "projectPath": "C:\\Git_Projects\\ExercicioPratico\\ExercicioPratico\\ExercicioPratico.CrossCutting.IoC\\ExercicioPratico.CrossCutting.IoC.csproj"
-              },
-              "C:\\Git_Projects\\ExercicioPratico\\ExercicioPratico\\ExercicioPratico.Domain\\ExercicioPratico.Domain.csproj": {
-                "projectPath": "C:\\Git_Projects\\ExercicioPratico\\ExercicioPratico\\ExercicioPratico.Domain\\ExercicioPratico.Domain.csproj"
-              },
-              "C:\\Git_Projects\\ExercicioPratico\\ExercicioPratico\\ExercicioPratico.Infra.Data\\ExercicioPratico.Infra.Data.csproj": {
-                "projectPath": "C:\\Git_Projects\\ExercicioPratico\\ExercicioPratico\\ExercicioPratico.Infra.Data\\ExercicioPratico.Infra.Data.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netcoreapp3.1": {
-          "dependencies": {
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
-              "target": "Package",
-              "version": "[3.1.3, )"
-            },
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[5.4.1, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

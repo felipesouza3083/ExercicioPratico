@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
+using ExercicioPratico.Application.Commands.Fornecedores;
+using ExercicioPratico.Application.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,22 +14,58 @@ namespace ExercicioPratico.Services.API.Controllers
     [ApiController]
     public class FornecedorController : ControllerBase
     {
-        [HttpPost]
-        public IActionResult Post()
+        private readonly IFornecedorApplicationService fornecedorApplicationService;
+
+        public FornecedorController(IFornecedorApplicationService fornecedorApplicationService)
         {
-            return Ok();
+            this.fornecedorApplicationService = fornecedorApplicationService;
+        }
+
+        [HttpPost]
+        public IActionResult Post(CreateFornecedorCommand command)
+        {
+            try
+            {
+                fornecedorApplicationService.Add(command);
+
+                return Ok(new { Message = "Fornecedor cadastrado com sucesso." });
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
         }
 
         [HttpPut]
-        public IActionResult Put()
+        public IActionResult Put(UpdateFornecedorCommand command)
         {
-            return Ok();
+            try
+            {
+                fornecedorApplicationService.Update(command);
+
+                return Ok(new { Message = "Fornecedor atualizado com sucesso." });
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
         }
 
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public IActionResult Delete(string id)
         {
-            return Ok();
+            try
+            {
+                var command = new DeleteFornecedorCommand { Id = id };
+
+                fornecedorApplicationService.Delete(command);
+
+                return Ok(new { Message = "Fornecedor excluído com sucesso." });
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
         }
 
         [HttpGet]

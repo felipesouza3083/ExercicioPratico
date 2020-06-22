@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ExercicioPratico.Application.Commands.Categorias;
+using ExercicioPratico.Application.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,22 +13,58 @@ namespace ExercicioPratico.Services.API.Controllers
     [ApiController]
     public class CategoriaController : ControllerBase
     {
-        [HttpPost]
-        public IActionResult Post()
+        private readonly ICategoriaApplicationService categoriaApplicationService;
+
+        public CategoriaController(ICategoriaApplicationService categoriaApplicationService)
         {
-            return Ok();
+            this.categoriaApplicationService = categoriaApplicationService;
+        }
+
+        [HttpPost]
+        public IActionResult Post(CreateCategoriaCommand command)
+        {
+            try
+            {
+                categoriaApplicationService.Add(command);
+
+                return Ok(new { Message = "Categoria cadastrada com sucesso." });
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
         }
 
         [HttpPut]
-        public IActionResult Put()
+        public IActionResult Put(UpdateCategoriaCommand command)
         {
-            return Ok();
+            try
+            {
+                categoriaApplicationService.Update(command);
+
+                return Ok(new { Message = "Categoria Atualizada com sucesso." });
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
         }
 
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public IActionResult Delete(string id)
         {
-            return Ok();
+            try
+            {
+                var command = new DeleteCategoriaCommand { Id = id };
+
+                categoriaApplicationService.Remove(command);
+
+                return Ok(new { Message = "Categoria excluída com sucesso." });
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
         }
 
         [HttpGet]

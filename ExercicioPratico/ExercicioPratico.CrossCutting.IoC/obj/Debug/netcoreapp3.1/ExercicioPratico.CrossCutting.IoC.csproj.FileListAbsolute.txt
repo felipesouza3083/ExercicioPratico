@@ -1,0 +1,16 @@
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.CrossCutting.IoC\bin\Debug\netcoreapp3.1\ExercicioPratico.CrossCutting.IoC.deps.json
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.CrossCutting.IoC\bin\Debug\netcoreapp3.1\ExercicioPratico.CrossCutting.IoC.dll
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.CrossCutting.IoC\bin\Debug\netcoreapp3.1\ExercicioPratico.CrossCutting.IoC.pdb
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.CrossCutting.IoC\bin\Debug\netcoreapp3.1\ExercicioPratico.Application.dll
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.CrossCutting.IoC\bin\Debug\netcoreapp3.1\ExercicioPratico.Domain.dll
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.CrossCutting.IoC\bin\Debug\netcoreapp3.1\ExercicioPratico.Infra.Data.dll
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.CrossCutting.IoC\bin\Debug\netcoreapp3.1\ExercicioPratico.Application.pdb
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.CrossCutting.IoC\bin\Debug\netcoreapp3.1\ExercicioPratico.Domain.pdb
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.CrossCutting.IoC\bin\Debug\netcoreapp3.1\ExercicioPratico.Infra.Data.pdb
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.CrossCutting.IoC\obj\Debug\netcoreapp3.1\ExercicioPratico.CrossCutting.IoC.csprojAssemblyReference.cache
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.CrossCutting.IoC\obj\Debug\netcoreapp3.1\ExercicioPratico.CrossCutting.IoC.AssemblyInfoInputs.cache
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.CrossCutting.IoC\obj\Debug\netcoreapp3.1\ExercicioPratico.CrossCutting.IoC.AssemblyInfo.cs
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.CrossCutting.IoC\obj\Debug\netcoreapp3.1\ExercicioPratico.CrossCutting.IoC.csproj.CoreCompileInputs.cache
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.CrossCutting.IoC\obj\Debug\netcoreapp3.1\ExercicioPratico.CrossCutting.IoC.csproj.CopyComplete
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.CrossCutting.IoC\obj\Debug\netcoreapp3.1\ExercicioPratico.CrossCutting.IoC.dll
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.CrossCutting.IoC\obj\Debug\netcoreapp3.1\ExercicioPratico.CrossCutting.IoC.pdb
