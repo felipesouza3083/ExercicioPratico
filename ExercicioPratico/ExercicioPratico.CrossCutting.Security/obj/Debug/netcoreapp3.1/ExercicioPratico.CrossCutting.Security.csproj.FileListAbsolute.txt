@@ -1,0 +1,9 @@
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.CrossCutting.Security\bin\Debug\netcoreapp3.1\ExercicioPratico.CrossCutting.Security.deps.json
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.CrossCutting.Security\bin\Debug\netcoreapp3.1\ExercicioPratico.CrossCutting.Security.dll
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.CrossCutting.Security\obj\Debug\netcoreapp3.1\ExercicioPratico.CrossCutting.Security.csprojAssemblyReference.cache
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.CrossCutting.Security\obj\Debug\netcoreapp3.1\ExercicioPratico.CrossCutting.Security.AssemblyInfoInputs.cache
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.CrossCutting.Security\obj\Debug\netcoreapp3.1\ExercicioPratico.CrossCutting.Security.AssemblyInfo.cs
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.CrossCutting.Security\bin\Debug\netcoreapp3.1\ExercicioPratico.CrossCutting.Security.pdb
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.CrossCutting.Security\obj\Debug\netcoreapp3.1\ExercicioPratico.CrossCutting.Security.csproj.CoreCompileInputs.cache
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.CrossCutting.Security\obj\Debug\netcoreapp3.1\ExercicioPratico.CrossCutting.Security.dll
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.CrossCutting.Security\obj\Debug\netcoreapp3.1\ExercicioPratico.CrossCutting.Security.pdb

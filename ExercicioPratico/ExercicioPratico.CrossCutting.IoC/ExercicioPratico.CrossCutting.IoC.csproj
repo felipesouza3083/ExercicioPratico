@@ -7,6 +7,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ExercicioPratico.Application\ExercicioPratico.Application.csproj" />
     <ProjectReference Include="..\ExercicioPratico.Domain\ExercicioPratico.Domain.csproj" />
+    <ProjectReference Include="..\ExercicioPratico.Infra.Criptography\ExercicioPratico.Infra.Criptography.csproj" />
     <ProjectReference Include="..\ExercicioPratico.Infra.Data\ExercicioPratico.Infra.Data.csproj" />
   </ItemGroup>
 

@@ -1,0 +1,12 @@
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Criptography\bin\Debug\netcoreapp3.1\ExercicioPratico.Infra.Criptography.deps.json
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Criptography\bin\Debug\netcoreapp3.1\ExercicioPratico.Infra.Criptography.dll
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Criptography\bin\Debug\netcoreapp3.1\ExercicioPratico.Infra.Criptography.pdb
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Criptography\bin\Debug\netcoreapp3.1\ExercicioPratico.Domain.dll
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Criptography\bin\Debug\netcoreapp3.1\ExercicioPratico.Domain.pdb
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Criptography\obj\Debug\netcoreapp3.1\ExercicioPratico.Infra.Criptography.csprojAssemblyReference.cache
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Criptography\obj\Debug\netcoreapp3.1\ExercicioPratico.Infra.Criptography.AssemblyInfoInputs.cache
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Criptography\obj\Debug\netcoreapp3.1\ExercicioPratico.Infra.Criptography.AssemblyInfo.cs
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Criptography\obj\Debug\netcoreapp3.1\ExercicioPratico.Infra.Criptography.csproj.CoreCompileInputs.cache
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Criptography\obj\Debug\netcoreapp3.1\ExercicioPratico.Infra.Criptography.csproj.CopyComplete
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Criptography\obj\Debug\netcoreapp3.1\ExercicioPratico.Infra.Criptography.dll
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Criptography\obj\Debug\netcoreapp3.1\ExercicioPratico.Infra.Criptography.pdb

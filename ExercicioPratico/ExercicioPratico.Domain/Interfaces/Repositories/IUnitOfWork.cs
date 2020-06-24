@@ -19,6 +19,7 @@ namespace ExercicioPratico.Domain.Interfaces.Repositories
         IProdutoRepository ProdutoRepository { get; }
         IFornecedorRepository FornecedorRepository { get; }
         ICategoriaRepository CategoriaRepository { get; }
+        IUsuarioRepository UsuarioRepository { get; }
 
         #endregion
     }

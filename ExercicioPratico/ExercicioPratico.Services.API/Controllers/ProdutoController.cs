@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using ExercicioPratico.Application.Commands.Produtos;
 using ExercicioPratico.Application.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,6 +12,7 @@ namespace ExercicioPratico.Services.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ProdutoController : ControllerBase
     {
         private readonly IProdutoApplicationService produtoApplicationService;

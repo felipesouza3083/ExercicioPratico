@@ -14,3 +14,7 @@ C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.CrossCutting.
 C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.CrossCutting.IoC\obj\Debug\netcoreapp3.1\ExercicioPratico.CrossCutting.IoC.csproj.CopyComplete
 C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.CrossCutting.IoC\obj\Debug\netcoreapp3.1\ExercicioPratico.CrossCutting.IoC.dll
 C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.CrossCutting.IoC\obj\Debug\netcoreapp3.1\ExercicioPratico.CrossCutting.IoC.pdb
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.CrossCutting.IoC\bin\Debug\netcoreapp3.1\ExercicioPratico.CrossCutting.Security.dll
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.CrossCutting.IoC\bin\Debug\netcoreapp3.1\ExercicioPratico.Infra.Criptography.dll
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.CrossCutting.IoC\bin\Debug\netcoreapp3.1\ExercicioPratico.Infra.Criptography.pdb
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.CrossCutting.IoC\bin\Debug\netcoreapp3.1\ExercicioPratico.CrossCutting.Security.pdb

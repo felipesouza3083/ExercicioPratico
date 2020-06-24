@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ExercicioPratico.CrossCutting.Security\ExercicioPratico.CrossCutting.Security.csproj" />
     <ProjectReference Include="..\ExercicioPratico.Domain\ExercicioPratico.Domain.csproj" />
   </ItemGroup>
 

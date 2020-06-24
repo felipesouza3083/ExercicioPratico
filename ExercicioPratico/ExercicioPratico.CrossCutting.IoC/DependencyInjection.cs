@@ -1,8 +1,10 @@
 ﻿using ExercicioPratico.Application.Interfaces;
 using ExercicioPratico.Application.Services;
+using ExercicioPratico.Domain.Interfaces.Cryptography;
 using ExercicioPratico.Domain.Interfaces.Repositories;
 using ExercicioPratico.Domain.Interfaces.Services;
 using ExercicioPratico.Domain.Services;
+using ExercicioPratico.Infra.Criptography;
 using ExercicioPratico.Infra.Data.Repositories;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
@@ -25,6 +27,9 @@ namespace ExercicioPratico.CrossCutting.IoC
             services.AddTransient<IProdutoApplicationService,
                 ProdutoApplicationService>();
 
+            services.AddTransient<IUsuarioApplicationService,
+                UsuarioApplicationService>();
+
             #endregion
 
             #region Domain
@@ -37,6 +42,9 @@ namespace ExercicioPratico.CrossCutting.IoC
 
             services.AddTransient<IProdutoDomainService,
                 ProdutoDomainService>();
+
+            services.AddTransient<IUsuarioDomainService,
+                UsuarioDomainService>();
 
             #endregion
 
@@ -51,8 +59,14 @@ namespace ExercicioPratico.CrossCutting.IoC
             services.AddTransient<IProdutoRepository,
                 ProdutoRepository>();
 
+            services.AddTransient<IUsuarioRepository,
+                UsuarioRepository>();
+
             services.AddTransient<IUnitOfWork,
                 UnitOfWork>();
+
+            services.AddTransient<IMD5service,
+                MD5Service>();
 
             #endregion
         }

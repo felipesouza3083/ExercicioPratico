@@ -32,6 +32,8 @@ namespace ExercicioPratico.Services.API
 
             EntityFrameworkSetup.AddEntityFrameworkSetup(services, Configuration);
 
+            JwtBearerSetup.AddJwtBearerSetup(services, Configuration);
+
             DependencyInjection.Register(services);
         }
 
@@ -45,7 +47,7 @@ namespace ExercicioPratico.Services.API
 
             app.UseRouting();
 
-            app.UseAuthorization();
+            JwtBearerSetup.UseJwtBearerSetup(app);
 
             app.UseEndpoints(endpoints =>
             {

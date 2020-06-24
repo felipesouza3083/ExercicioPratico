@@ -39,6 +39,8 @@ namespace ExercicioPratico.Infra.Data.Repositories
 
         public ICategoriaRepository CategoriaRepository => new CategoriaRepository(context);
 
+        public IUsuarioRepository UsuarioRepository => new UsuarioRepository(context);
+
         public void Dispose()
         {
             context.Dispose();
