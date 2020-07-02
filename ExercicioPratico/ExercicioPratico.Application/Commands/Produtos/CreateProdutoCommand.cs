@@ -1,10 +1,11 @@
-﻿using System;
+﻿using MediatR;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace ExercicioPratico.Application.Commands.Produtos
 {
-    public class CreateProdutoCommand
+    public class CreateProdutoCommand : IRequest
     {
         public string Nome { get; set; }
         public decimal Preco { get; set; }

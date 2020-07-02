@@ -1,10 +1,11 @@
-﻿using System;
+﻿using MediatR;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace ExercicioPratico.Application.Commands.Produtos
 {
-    public class UpdateProdutoCommand
+    public class UpdateProdutoCommand : IRequest
     {
         public string Id { get; set; }
         public string Nome { get; set; }

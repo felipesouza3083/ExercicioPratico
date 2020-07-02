@@ -1,10 +1,11 @@
-﻿using System;
+﻿using MediatR;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace ExercicioPratico.Application.Commands.Fornecedores
 {
-    public class CreateFornecedorCommand
+    public class CreateFornecedorCommand : IRequest
     {
         public string Nome { get; set; }
         public string RazaoSocial { get; set; }

@@ -1,0 +1,12 @@
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Caching\bin\Debug\netcoreapp3.1\ExercicioPratico.Infra.Caching.deps.json
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Caching\bin\Debug\netcoreapp3.1\ExercicioPratico.Infra.Caching.dll
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Caching\obj\Debug\netcoreapp3.1\ExercicioPratico.Infra.Caching.csprojAssemblyReference.cache
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Caching\obj\Debug\netcoreapp3.1\ExercicioPratico.Infra.Caching.AssemblyInfoInputs.cache
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Caching\obj\Debug\netcoreapp3.1\ExercicioPratico.Infra.Caching.AssemblyInfo.cs
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Caching\bin\Debug\netcoreapp3.1\ExercicioPratico.Infra.Caching.pdb
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Caching\bin\Debug\netcoreapp3.1\ExercicioPratico.Domain.dll
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Caching\bin\Debug\netcoreapp3.1\ExercicioPratico.Domain.pdb
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Caching\obj\Debug\netcoreapp3.1\ExercicioPratico.Infra.Caching.csproj.CoreCompileInputs.cache
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Caching\obj\Debug\netcoreapp3.1\ExercicioPratico.Infra.Caching.csproj.CopyComplete
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Caching\obj\Debug\netcoreapp3.1\ExercicioPratico.Infra.Caching.dll
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Infra.Caching\obj\Debug\netcoreapp3.1\ExercicioPratico.Infra.Caching.pdb

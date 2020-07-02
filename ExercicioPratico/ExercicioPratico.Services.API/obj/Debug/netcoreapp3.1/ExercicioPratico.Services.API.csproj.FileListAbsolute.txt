@@ -156,3 +156,11 @@ C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Services.API\
 C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Services.API\bin\Debug\netcoreapp3.1\ExercicioPratico.Infra.Criptography.dll
 C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Services.API\bin\Debug\netcoreapp3.1\ExercicioPratico.CrossCutting.Security.pdb
 C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Services.API\bin\Debug\netcoreapp3.1\ExercicioPratico.Infra.Criptography.pdb
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Services.API\bin\Debug\netcoreapp3.1\DnsClient.dll
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Services.API\bin\Debug\netcoreapp3.1\MongoDB.Bson.dll
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Services.API\bin\Debug\netcoreapp3.1\MongoDB.Driver.dll
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Services.API\bin\Debug\netcoreapp3.1\MongoDB.Driver.Core.dll
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Services.API\bin\Debug\netcoreapp3.1\MongoDB.Libmongocrypt.dll
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Services.API\bin\Debug\netcoreapp3.1\SharpCompress.dll
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Services.API\bin\Debug\netcoreapp3.1\ExercicioPratico.Infra.Caching.dll
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Services.API\bin\Debug\netcoreapp3.1\ExercicioPratico.Infra.Caching.pdb

@@ -1,9 +1,11 @@
 ﻿using ExercicioPratico.Application.Interfaces;
 using ExercicioPratico.Application.Services;
+using ExercicioPratico.Domain.Interfaces.Caching;
 using ExercicioPratico.Domain.Interfaces.Cryptography;
 using ExercicioPratico.Domain.Interfaces.Repositories;
 using ExercicioPratico.Domain.Interfaces.Services;
 using ExercicioPratico.Domain.Services;
+using ExercicioPratico.Infra.Caching.Persistence;
 using ExercicioPratico.Infra.Criptography;
 using ExercicioPratico.Infra.Data.Repositories;
 using MediatR;
@@ -67,6 +69,14 @@ namespace ExercicioPratico.CrossCutting.IoC
 
             services.AddTransient<IMD5service,
                 MD5Service>();
+
+            #endregion
+
+            #region Caching
+
+            services.AddTransient<ICategoriaCaching, CategoriaCaching>();
+            services.AddTransient<IFornecedorCaching, FornecedorCaching>();
+            services.AddTransient<IProdutoCaching, ProdutoCaching>();
 
             #endregion
         }

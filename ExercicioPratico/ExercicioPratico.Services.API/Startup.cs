@@ -34,6 +34,8 @@ namespace ExercicioPratico.Services.API
 
             JwtBearerSetup.AddJwtBearerSetup(services, Configuration);
 
+            MongoDBSetup.AddMongoDBSetup(services, Configuration);
+
             DependencyInjection.Register(services);
         }
 
