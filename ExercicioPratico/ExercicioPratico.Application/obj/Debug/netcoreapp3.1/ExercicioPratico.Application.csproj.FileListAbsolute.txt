@@ -7,8 +7,8 @@ C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Application\o
 C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Application\obj\Debug\netcoreapp3.1\ExercicioPratico.Application.AssemblyInfo.cs
 C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Application\obj\Debug\netcoreapp3.1\ExercicioPratico.Application.csproj.CopyComplete
 C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Application\bin\Debug\netcoreapp3.1\ExercicioPratico.Application.pdb
-C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Application\obj\Debug\netcoreapp3.1\ExercicioPratico.Application.csproj.CoreCompileInputs.cache
 C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Application\obj\Debug\netcoreapp3.1\ExercicioPratico.Application.dll
 C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Application\obj\Debug\netcoreapp3.1\ExercicioPratico.Application.pdb
 C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Application\bin\Debug\netcoreapp3.1\ExercicioPratico.CrossCutting.Security.dll
 C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Application\bin\Debug\netcoreapp3.1\ExercicioPratico.CrossCutting.Security.pdb
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Application\obj\Debug\netcoreapp3.1\ExercicioPratico.Application.csproj.CoreCompileInputs.cache

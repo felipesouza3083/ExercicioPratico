@@ -97,7 +97,7 @@ namespace ExercicioPratico.Application.RequestHandlers
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            fornecedorDomainService.Dispose();
         }
     }
 }

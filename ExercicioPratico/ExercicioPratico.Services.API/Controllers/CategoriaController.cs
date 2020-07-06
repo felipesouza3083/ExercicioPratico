@@ -72,13 +72,27 @@ namespace ExercicioPratico.Services.API.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            return Ok();
+            try
+            {
+                return Ok(categoriaApplicationService.GetAll());
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public IActionResult GetById(string id)
         {
-            return Ok();
+            try
+            {
+                return Ok(categoriaApplicationService.GetById(id));
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
         }
     }
 }

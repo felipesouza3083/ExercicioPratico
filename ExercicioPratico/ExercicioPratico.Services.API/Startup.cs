@@ -37,6 +37,8 @@ namespace ExercicioPratico.Services.API
             MongoDBSetup.AddMongoDBSetup(services, Configuration);
 
             DependencyInjection.Register(services);
+
+            MediatRSetup.AddMediatRSetup(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

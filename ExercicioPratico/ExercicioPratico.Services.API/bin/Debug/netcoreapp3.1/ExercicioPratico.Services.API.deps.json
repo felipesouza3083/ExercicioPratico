@@ -28,6 +28,8 @@
           "ExercicioPratico.CrossCutting.IoC": "1.0.0",
           "ExercicioPratico.Domain": "1.0.0",
           "ExercicioPratico.Infra.Data": "1.0.0",
+          "MediatR": "8.0.2",
+          "MediatR.Extensions.Microsoft.DependencyInjection": "8.0.1",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.3",
           "Swashbuckle.AspNetCore": "5.4.1",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
@@ -342,15 +344,30 @@
           "lib/netstandard2.0/FluentValidation.dll": {}
         }
       },
-      "MediatR/8.0.1": {
+      "MediatR/8.0.2": {
         "runtime": {
-          "lib/netstandard2.0/MediatR.dll": {
-            "assemblyVersion": "8.0.1.0",
+          "lib/netstandard2.1/MediatR.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.2.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.1/MediatR.dll": {}
+        }
+      },
+      "MediatR.Extensions.Microsoft.DependencyInjection/8.0.1": {
+        "dependencies": {
+          "MediatR": "8.0.2",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/MediatR.Extensions.Microsoft.DependencyInjection.dll": {
+            "assemblyVersion": "8.0.0.0",
             "fileVersion": "8.0.1.0"
           }
         },
         "compile": {
-          "lib/netstandard2.0/MediatR.dll": {}
+          "lib/netstandard2.0/MediatR.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
       "Microsoft.AspNetCore.Authentication/2.2.0": {
@@ -2724,7 +2741,8 @@
           "ExercicioPratico.CrossCutting.Security": "1.0.0",
           "ExercicioPratico.Domain": "1.0.0",
           "FluentValidation": "8.6.2",
-          "MediatR": "8.0.1"
+          "MediatR": "8.0.2",
+          "MediatR.Extensions.Microsoft.DependencyInjection": "8.0.1"
         },
         "runtime": {
           "ExercicioPratico.Application.dll": {}
@@ -4421,12 +4439,19 @@
       "path": "fluentvalidation/8.6.2",
       "hashPath": "fluentvalidation.8.6.2.nupkg.sha512"
     },
-    "MediatR/8.0.1": {
+    "MediatR/8.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-nqtv05FHNNNLmEv4QN9pRtmSLa0bnDPciOjLKpA/k5FZIVS72vPyY3/1lHQ9V/dcQSMA5ZLig62SyRk2cSKNBA==",
-      "path": "mediatr/8.0.1",
-      "hashPath": "mediatr.8.0.1.nupkg.sha512"
+      "sha512": "sha512-6mexVNDRj2T/z0OkxO5H5HPKowTP1iyToCACV/bZ/mU1X4MbzcBlqqQwGF40k+rfi+1ePcTYzSZLsFp2zM4e7g==",
+      "path": "mediatr/8.0.2",
+      "hashPath": "mediatr.8.0.2.nupkg.sha512"
+    },
+    "MediatR.Extensions.Microsoft.DependencyInjection/8.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NsNGjesuAFiUoJCYXVzuui69iJuKFVLomk2q+nWkp8VwZjarjJRKLAQtzJqvya7H2hw/DHqzS6vxEghLtZa7yg==",
+      "path": "mediatr.extensions.microsoft.dependencyinjection/8.0.1",
+      "hashPath": "mediatr.extensions.microsoft.dependencyinjection.8.0.1.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication/2.2.0": {
       "type": "package",

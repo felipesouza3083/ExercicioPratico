@@ -93,9 +93,6 @@ C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Services.API\
 C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Services.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
 C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Services.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Services.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Services.API\obj\Debug\netcoreapp3.1\ExercicioPratico.Services.API.csproj.CoreCompileInputs.cache
-C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Services.API\obj\Debug\netcoreapp3.1\ExercicioPratico.Services.API.MvcApplicationPartsAssemblyInfo.cs
-C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Services.API\obj\Debug\netcoreapp3.1\ExercicioPratico.Services.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Services.API\obj\Debug\netcoreapp3.1\ExercicioPratico.Services.API.csprojAssemblyReference.cache
 C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Services.API\bin\Debug\netcoreapp3.1\AutoMapper.dll
 C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Services.API\bin\Debug\netcoreapp3.1\FluentValidation.dll
@@ -164,3 +161,7 @@ C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Services.API\
 C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Services.API\bin\Debug\netcoreapp3.1\SharpCompress.dll
 C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Services.API\bin\Debug\netcoreapp3.1\ExercicioPratico.Infra.Caching.dll
 C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Services.API\bin\Debug\netcoreapp3.1\ExercicioPratico.Infra.Caching.pdb
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Services.API\bin\Debug\netcoreapp3.1\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Services.API\obj\Debug\netcoreapp3.1\ExercicioPratico.Services.API.csproj.CoreCompileInputs.cache
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Services.API\obj\Debug\netcoreapp3.1\ExercicioPratico.Services.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Services.API\obj\Debug\netcoreapp3.1\ExercicioPratico.Services.API.MvcApplicationPartsAssemblyInfo.cache
