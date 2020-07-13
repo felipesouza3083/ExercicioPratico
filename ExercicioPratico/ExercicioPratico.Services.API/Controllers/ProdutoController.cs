@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using ExercicioPratico.Application.Commands.Produtos;
 using ExercicioPratico.Application.Interfaces;
+using ExercicioPratico.Services.API.Adapters;
+using FluentValidation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -31,6 +33,10 @@ namespace ExercicioPratico.Services.API.Controllers
 
                 return Ok(new { Message = "Produto cadastrado com sucesso" });
             }
+            catch (ValidationException e)
+            {
+                return BadRequest(ValidationAdapter.Parse(e.Errors));
+            }
             catch (Exception e)
             {
                 return StatusCode(500, e.Message);
@@ -45,6 +51,10 @@ namespace ExercicioPratico.Services.API.Controllers
                 produtoApplicationService.Update(command);
 
                 return Ok(new { Message = "Produto ataulizado com sucesso" });
+            }
+            catch (ValidationException e)
+            {
+                return BadRequest(ValidationAdapter.Parse(e.Errors));
             }
             catch (Exception e)
             {

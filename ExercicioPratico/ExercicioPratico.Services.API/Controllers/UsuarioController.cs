@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using ExercicioPratico.Application.Commands.Usuarios;
 using ExercicioPratico.Application.Interfaces;
+using ExercicioPratico.Services.API.Adapters;
+using FluentValidation;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualStudio.Web.CodeGeneration.Contracts.Messaging;
@@ -30,6 +32,10 @@ namespace ExercicioPratico.Services.API.Controllers
 
                 return Ok(new { Message = "Usuário criado com sucesso!" });
             }
+            catch (ValidationException e) 
+            { 
+                return BadRequest(ValidationAdapter.Parse(e.Errors)); 
+            }
             catch (Exception e)
             {
                 return StatusCode(500, e.Message);
@@ -52,6 +58,10 @@ namespace ExercicioPratico.Services.API.Controllers
                     });
 
                 return BadRequest(new { Message = "Usuário não encontrado." });
+            }
+            catch (ValidationException e)
+            {
+                return BadRequest(ValidationAdapter.Parse(e.Errors));
             }
             catch (Exception e)
             {

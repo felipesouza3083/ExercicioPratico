@@ -5,6 +5,8 @@ using System.Linq.Expressions;
 using System.Threading.Tasks;
 using ExercicioPratico.Application.Commands.Fornecedores;
 using ExercicioPratico.Application.Interfaces;
+using ExercicioPratico.Services.API.Adapters;
+using FluentValidation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -32,6 +34,10 @@ namespace ExercicioPratico.Services.API.Controllers
 
                 return Ok(new { Message = "Fornecedor cadastrado com sucesso." });
             }
+            catch (ValidationException e)
+            {
+                return BadRequest(ValidationAdapter.Parse(e.Errors));
+            }
             catch (Exception e)
             {
                 return StatusCode(500, e.Message);
@@ -46,6 +52,10 @@ namespace ExercicioPratico.Services.API.Controllers
                 fornecedorApplicationService.Update(command);
 
                 return Ok(new { Message = "Fornecedor atualizado com sucesso." });
+            }
+            catch (ValidationException e)
+            {
+                return BadRequest(ValidationAdapter.Parse(e.Errors));
             }
             catch (Exception e)
             {
