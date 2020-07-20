@@ -1,4 +1,5 @@
-﻿using ExercicioPratico.Application.Commands.Produtos;
+﻿using AutoMapper;
+using ExercicioPratico.Application.Commands.Produtos;
 using ExercicioPratico.Application.Notifications;
 using ExercicioPratico.Domain.Interfaces.Services;
 using ExercicioPratico.Domain.Models;
@@ -13,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace ExercicioPratico.Application.RequestHandlers
 {
-    public class ProdutoRequestHandler:
+    public class ProdutoRequestHandler :
         IRequestHandler<CreateProdutoCommand>,
         IRequestHandler<UpdateProdutoCommand>,
         IRequestHandler<DeleteProdutoCommand>,
@@ -21,25 +22,18 @@ namespace ExercicioPratico.Application.RequestHandlers
     {
         private readonly IMediator mediator;
         private readonly IProdutoDomainService produtoDomainService;
+        private readonly IMapper mapper;
 
-        public ProdutoRequestHandler(IMediator mediator, IProdutoDomainService produtoDomainService)
+        public ProdutoRequestHandler(IMediator mediator, IProdutoDomainService produtoDomainService, IMapper mapper)
         {
             this.mediator = mediator;
             this.produtoDomainService = produtoDomainService;
+            this.mapper = mapper;
         }
 
-        public Task<Unit> Handle(CreateProdutoCommand request, CancellationToken cancellationToken)
+        public async Task<Unit> Handle(CreateProdutoCommand request, CancellationToken cancellationToken)
         {
-            var produto = new Produto
-            {
-                Id = Guid.NewGuid(),
-                Nome = request.Nome,
-                Preco = request.Preco,
-                DataCompra = request.DataCompra,
-                Quantidade = request.Quantidade,
-                CategoriaId = Guid.Parse(request.CategoriaId),
-                FornecedorId = Guid.Parse(request.FornecedorId)
-            };
+            var produto = mapper.Map<Produto>(request);
 
             var validation = new ProdutoValidation().Validate(produto);
             if (!validation.IsValid)
@@ -47,25 +41,18 @@ namespace ExercicioPratico.Application.RequestHandlers
 
             produtoDomainService.Add(produto);
 
-            mediator.Publish(new ProdutoNotification
+            await mediator.Publish(new ProdutoNotification
             {
                 Produto = produto,
                 Action = ActionNotification.Criar
             });
 
-            return Task.FromResult(new Unit());
+            return Unit.Value;
         }
 
-        public Task<Unit> Handle(UpdateProdutoCommand request, CancellationToken cancellationToken)
+        public async Task<Unit> Handle(UpdateProdutoCommand request, CancellationToken cancellationToken)
         {
-            var produto = produtoDomainService.GetById(Guid.Parse(request.Id));
-
-            produto.Nome = request.Nome;
-            produto.Preco = request.Preco;
-            produto.DataCompra = request.DataCompra;
-            produto.Quantidade = request.Quantidade;
-            produto.CategoriaId = Guid.Parse(request.CategoriaId);
-            produto.FornecedorId = Guid.Parse(request.FornecedorId);
+            var produto = mapper.Map<Produto>(request);
 
             var validation = new ProdutoValidation().Validate(produto);
             if (!validation.IsValid)
@@ -73,31 +60,31 @@ namespace ExercicioPratico.Application.RequestHandlers
 
             produtoDomainService.Update(produto);
 
-            mediator.Publish(new ProdutoNotification
+            await mediator.Publish(new ProdutoNotification
             {
                 Produto = produto,
                 Action = ActionNotification.Atualizar
             });
 
-            return Task.FromResult(new Unit());
+            return Unit.Value;
         }
 
-        public Task<Unit> Handle(DeleteProdutoCommand request, CancellationToken cancellationToken)
+        public async Task<Unit> Handle(DeleteProdutoCommand request, CancellationToken cancellationToken)
         {
-            var produto = produtoDomainService.GetById(Guid.Parse(request.Id));
+            var produto = mapper.Map<Produto>(request);
 
             if (produto == null)
                 throw new Exception("Produto não encontrado.");
 
             produtoDomainService.Remove(produto);
 
-            mediator.Publish(new ProdutoNotification
+            await mediator.Publish(new ProdutoNotification
             {
                 Produto = produto,
                 Action = ActionNotification.Excluir
             });
 
-            return Task.FromResult(new Unit());
+            return Unit.Value;
         }
 
         public void Dispose()

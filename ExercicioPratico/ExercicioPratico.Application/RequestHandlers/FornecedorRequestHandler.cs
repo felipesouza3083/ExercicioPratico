@@ -1,4 +1,5 @@
-﻿using ExercicioPratico.Application.Commands.Fornecedores;
+﻿using AutoMapper;
+using ExercicioPratico.Application.Commands.Fornecedores;
 using ExercicioPratico.Application.Notifications;
 using ExercicioPratico.Domain.Interfaces.Services;
 using ExercicioPratico.Domain.Models;
@@ -21,18 +22,18 @@ namespace ExercicioPratico.Application.RequestHandlers
     {
         private readonly IMediator mediator;
         private readonly IFornecedorDomainService fornecedorDomainService;
+        private readonly IMapper mapper;
 
-        public Task<Unit> Handle(CreateFornecedorCommand request, CancellationToken cancellationToken)
+        public FornecedorRequestHandler(IMediator mediator, IFornecedorDomainService fornecedorDomainService, IMapper mapper)
         {
-            var fornecedor = new Fornecedor
-            {
-                Id = Guid.NewGuid(),
-                Nome = request.Nome,
-                Cnpj = request.Cnpj,
-                Email = request.Email,
-                RazaoSocial = request.RazaoSocial,
-                Telefone = request.Telefone
-            };
+            this.mediator = mediator;
+            this.fornecedorDomainService = fornecedorDomainService;
+            this.mapper = mapper;
+        }
+
+        public async Task<Unit> Handle(CreateFornecedorCommand request, CancellationToken cancellationToken)
+        {
+            var fornecedor = mapper.Map<Fornecedor>(request);
 
             var validation = new FornecedorValidation().Validate(fornecedor);
             if (!validation.IsValid)
@@ -40,27 +41,21 @@ namespace ExercicioPratico.Application.RequestHandlers
 
             fornecedorDomainService.Add(fornecedor);
 
-            mediator.Publish(new FornecedorNotification
+            await mediator.Publish(new FornecedorNotification
             {
                 Fornecedor = fornecedor,
                 Action = ActionNotification.Criar
             });
 
-            return Task.FromResult(new Unit());
+            return Unit.Value;
         }
 
-        public Task<Unit> Handle(UpdateFornecedorCommand request, CancellationToken cancellationToken)
+        public async Task<Unit> Handle(UpdateFornecedorCommand request, CancellationToken cancellationToken)
         {
-            var fornecedor = fornecedorDomainService.GetById(Guid.Parse(request.Id));
+            var fornecedor = mapper.Map<Fornecedor>(request); 
 
             if (fornecedor == null)
                 throw new Exception("Fornecedor não encontrado.");
-
-            fornecedor.Nome = request.Nome;
-            fornecedor.Cnpj = request.Cnpj;
-            fornecedor.Email = request.Email;
-            fornecedor.RazaoSocial = request.RazaoSocial;
-            fornecedor.Telefone = request.Telefone;
 
             var validation = new FornecedorValidation().Validate(fornecedor);
             if (!validation.IsValid)
@@ -68,31 +63,31 @@ namespace ExercicioPratico.Application.RequestHandlers
 
             fornecedorDomainService.Update(fornecedor);
 
-            mediator.Publish(new FornecedorNotification
+            await mediator.Publish(new FornecedorNotification
             {
                 Fornecedor = fornecedor,
                 Action = ActionNotification.Atualizar
             });
 
-            return Task.FromResult(new Unit());
+            return Unit.Value;
         }
 
-        public Task<Unit> Handle(DeleteFornecedorCommand request, CancellationToken cancellationToken)
+        public async Task<Unit> Handle(DeleteFornecedorCommand request, CancellationToken cancellationToken)
         {
-            var fornecedor = fornecedorDomainService.GetById(Guid.Parse(request.Id));
+            var fornecedor = mapper.Map<Fornecedor>(request); 
 
             if (fornecedor == null)
                 throw new Exception("Fornecedor não encontrado.");
 
             fornecedorDomainService.Remove(fornecedor);
 
-            mediator.Publish(new FornecedorNotification
+            await mediator.Publish(new FornecedorNotification
             {
                 Fornecedor = fornecedor,
                 Action = ActionNotification.Excluir
             });
 
-            return Task.FromResult(new Unit());
+            return Unit.Value;
         }
 
         public void Dispose()

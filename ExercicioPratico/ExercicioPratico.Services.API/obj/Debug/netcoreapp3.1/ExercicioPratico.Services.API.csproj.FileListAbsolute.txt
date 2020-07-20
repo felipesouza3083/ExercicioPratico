@@ -162,6 +162,7 @@ C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Services.API\
 C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Services.API\bin\Debug\netcoreapp3.1\ExercicioPratico.Infra.Caching.dll
 C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Services.API\bin\Debug\netcoreapp3.1\ExercicioPratico.Infra.Caching.pdb
 C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Services.API\bin\Debug\netcoreapp3.1\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Services.API\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Services.API\obj\Debug\netcoreapp3.1\ExercicioPratico.Services.API.csproj.CoreCompileInputs.cache
 C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Services.API\obj\Debug\netcoreapp3.1\ExercicioPratico.Services.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Git_Projects\ExercicioPratico\ExercicioPratico\ExercicioPratico.Services.API\obj\Debug\netcoreapp3.1\ExercicioPratico.Services.API.MvcApplicationPartsAssemblyInfo.cache

@@ -3,14 +3,15 @@ using ExercicioPratico.Domain.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace ExercicioPratico.Application.Interfaces
 {
     public interface ICategoriaApplicationService
     {
-        void Add(CreateCategoriaCommand command);
-        void Update(UpdateCategoriaCommand command);
-        void Remove(DeleteCategoriaCommand command);
+        Task Add(CreateCategoriaCommand command);
+        Task Update(UpdateCategoriaCommand command);
+        Task Remove(DeleteCategoriaCommand command);
         List<CategoriaDTO> GetAll();
         CategoriaDTO GetById(string id);
     }

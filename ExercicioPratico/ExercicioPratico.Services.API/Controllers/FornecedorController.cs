@@ -26,11 +26,11 @@ namespace ExercicioPratico.Services.API.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post(CreateFornecedorCommand command)
+        public async Task<IActionResult> Post(CreateFornecedorCommand command)
         {
             try
             {
-                fornecedorApplicationService.Add(command);
+                await fornecedorApplicationService.Add(command);
 
                 return Ok(new { Message = "Fornecedor cadastrado com sucesso." });
             }
@@ -45,11 +45,11 @@ namespace ExercicioPratico.Services.API.Controllers
         }
 
         [HttpPut]
-        public IActionResult Put(UpdateFornecedorCommand command)
+        public async Task<IActionResult> Put(UpdateFornecedorCommand command)
         {
             try
             {
-                fornecedorApplicationService.Update(command);
+                await fornecedorApplicationService.Update(command);
 
                 return Ok(new { Message = "Fornecedor atualizado com sucesso." });
             }
@@ -64,13 +64,13 @@ namespace ExercicioPratico.Services.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public IActionResult Delete(string id)
+        public async Task<IActionResult> Delete(string id)
         {
             try
             {
                 var command = new DeleteFornecedorCommand { Id = id };
 
-                fornecedorApplicationService.Delete(command);
+                await fornecedorApplicationService.Delete(command);
 
                 return Ok(new { Message = "Fornecedor excluído com sucesso." });
             }

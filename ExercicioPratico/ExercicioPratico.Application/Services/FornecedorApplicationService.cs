@@ -10,6 +10,7 @@ using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace ExercicioPratico.Application.Services
 {
@@ -24,19 +25,19 @@ namespace ExercicioPratico.Application.Services
             this.fornecedorCaching = fornecedorCaching;
         }
 
-        public void Add(CreateFornecedorCommand command)
+        public async Task Add(CreateFornecedorCommand command)
         {
-            mediator.Send(command);
+            await mediator.Send(command);
         }
 
-        public void Update(UpdateFornecedorCommand command)
+        public async Task Update(UpdateFornecedorCommand command)
         {
-            mediator.Send(command);
+            await mediator.Send(command);
         }
 
-        public void Delete(DeleteFornecedorCommand command)
+        public async Task Delete(DeleteFornecedorCommand command)
         {
-            mediator.Send(command);
+            await mediator.Send(command);
         }
 
         public List<FornecedorDTO> GetAll()

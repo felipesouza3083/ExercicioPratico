@@ -39,6 +39,10 @@ namespace ExercicioPratico.Services.API
             DependencyInjection.Register(services);
 
             MediatRSetup.AddMediatRSetup(services);
+
+            AutoMapperSetup.AddAutoMapperSetup(services);
+
+            CorsSetup.AddCorsSetup(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,6 +54,8 @@ namespace ExercicioPratico.Services.API
             }
 
             app.UseRouting();
+
+            CorsSetup.UseCorsSetup(app);
 
             JwtBearerSetup.UseJwtBearerSetup(app);
 

@@ -1,4 +1,5 @@
-﻿using ExercicioPratico.Application.Commands.Categorias;
+﻿using AutoMapper;
+using ExercicioPratico.Application.Commands.Categorias;
 using ExercicioPratico.Application.Notifications;
 using ExercicioPratico.Domain.Interfaces.Services;
 using ExercicioPratico.Domain.Models;
@@ -13,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace ExercicioPratico.Application.RequestHandlers
 {
-    public class CategoriaRequestHandler : 
+    public class CategoriaRequestHandler :
         IRequestHandler<CreateCategoriaCommand>,
         IRequestHandler<UpdateCategoriaCommand>,
         IRequestHandler<DeleteCategoriaCommand>,
@@ -21,45 +22,37 @@ namespace ExercicioPratico.Application.RequestHandlers
     {
         private readonly IMediator mediator;
         private readonly ICategoriaDomainService categoriaDomainService;
+        private readonly IMapper mapper;
 
-        public CategoriaRequestHandler(IMediator mediator, ICategoriaDomainService categoriaDomainService)
+        public CategoriaRequestHandler(IMediator mediator, ICategoriaDomainService categoriaDomainService, IMapper mapper)
         {
             this.mediator = mediator;
             this.categoriaDomainService = categoriaDomainService;
+            this.mapper = mapper;
         }
 
-        public Task<Unit> Handle(CreateCategoriaCommand request, CancellationToken cancellationToken)
+        public async Task<Unit> Handle(CreateCategoriaCommand request, CancellationToken cancellationToken)
         {
-            var categoria = new Categoria
-            {
-                Id = Guid.NewGuid(),
-                Nome = request.Nome,
-                Descricao = request.Descricao
-            };
+            var categoria = mapper.Map<Categoria>(request);
+
             var validation = new CategoriaValidation().Validate(categoria);
             if (!validation.IsValid)
                 throw new ValidationException(validation.Errors);
 
             categoriaDomainService.Add(categoria);
 
-            mediator.Publish(new CategoriaNotification
+            await mediator.Publish(new CategoriaNotification
             {
                 Categoria = categoria,
                 Action = ActionNotification.Criar
             });
 
-            return Task.FromResult(new Unit());
+            return Unit.Value;
         }
 
-        public Task<Unit> Handle(UpdateCategoriaCommand request, CancellationToken cancellationToken)
+        public async Task<Unit> Handle(UpdateCategoriaCommand request, CancellationToken cancellationToken)
         {
-            var categoria = categoriaDomainService.GetById(Guid.Parse(request.Id));
-
-            if (categoria == null)
-                throw new Exception("Categoria não encontrada.");
-
-            categoria.Nome = request.Nome;
-            categoria.Descricao = request.Descricao;
+            var categoria = mapper.Map<Categoria>(request);
 
             var validation = new CategoriaValidation().Validate(categoria);
             if (!validation.IsValid)
@@ -67,31 +60,31 @@ namespace ExercicioPratico.Application.RequestHandlers
 
             categoriaDomainService.Update(categoria);
 
-            mediator.Publish(new CategoriaNotification
+            await mediator.Publish(new CategoriaNotification
             {
                 Categoria = categoria,
                 Action = ActionNotification.Atualizar
             });
 
-            return Task.FromResult(new Unit());
+            return Unit.Value;
         }
 
-        public Task<Unit> Handle(DeleteCategoriaCommand request, CancellationToken cancellationToken)
+        public async Task<Unit> Handle(DeleteCategoriaCommand request, CancellationToken cancellationToken)
         {
-            var categoria = categoriaDomainService.GetById(Guid.Parse(request.Id));
+            var categoria = mapper.Map<Categoria>(request); 
 
             if (categoria == null)
                 throw new Exception("Categoria não encontrada.");
 
             categoriaDomainService.Remove(categoria);
 
-            mediator.Publish(new CategoriaNotification
+            await mediator.Publish(new CategoriaNotification
             {
                 Categoria = categoria,
                 Action = ActionNotification.Excluir
             });
 
-            return Task.FromResult(new Unit());
+            return Unit.Value;
         }
 
         public void Dispose()

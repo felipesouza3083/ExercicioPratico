@@ -1,4 +1,5 @@
-﻿using ExercicioPratico.Application.Notifications;
+﻿using AutoMapper;
+using ExercicioPratico.Application.Notifications;
 using ExercicioPratico.Domain.DTOs;
 using ExercicioPratico.Domain.Interfaces.Caching;
 using MediatR;
@@ -13,22 +14,19 @@ namespace ExercicioPratico.Application.Handlers
     public class CategoriaHandler : INotificationHandler<CategoriaNotification>
     {
         private readonly ICategoriaCaching categoriaCaching;
+        private readonly IMapper mapper;
 
-        public CategoriaHandler(ICategoriaCaching categoriaCaching)
+        public CategoriaHandler(ICategoriaCaching categoriaCaching, IMapper mapper)
         {
             this.categoriaCaching = categoriaCaching;
+            this.mapper = mapper;
         }
 
         public Task Handle(CategoriaNotification notification, CancellationToken cancellationToken)
         {
             return Task.Run(() =>
             {
-                var categoriaDTO = new CategoriaDTO
-                {
-                    Id = notification.Categoria.Id,
-                    Nome = notification.Categoria.Nome,
-                    Descricao = notification.Categoria.Descricao
-                };
+                var categoriaDTO = mapper.Map<CategoriaDTO>(notification.Categoria);
 
                 switch (notification.Action)
                 {

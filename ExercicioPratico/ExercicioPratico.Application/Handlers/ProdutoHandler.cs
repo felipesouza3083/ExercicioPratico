@@ -1,4 +1,5 @@
-﻿using ExercicioPratico.Application.Notifications;
+﻿using AutoMapper;
+using ExercicioPratico.Application.Notifications;
 using ExercicioPratico.Domain.DTOs;
 using ExercicioPratico.Domain.Interfaces.Caching;
 using MediatR;
@@ -13,26 +14,19 @@ namespace ExercicioPratico.Application.Handlers
     public class ProdutoHandler : INotificationHandler<ProdutoNotification>
     {
         private readonly IProdutoCaching produtoCaching;
+        private readonly IMapper mapper;
 
-        public ProdutoHandler(IProdutoCaching produtoCaching)
+        public ProdutoHandler(IProdutoCaching produtoCaching, IMapper mapper)
         {
             this.produtoCaching = produtoCaching;
+            this.mapper = mapper;
         }
 
         public Task Handle(ProdutoNotification notification, CancellationToken cancellationToken)
         {
             return Task.Run(() =>
             {
-                var produtoDTO = new ProdutoDTO
-                {
-                    Id = notification.Produto.Id,
-                    Nome = notification.Produto.Nome,
-                    Preco = notification.Produto.Preco,
-                    Quantidade = notification.Produto.Quantidade,
-                    DataCompra = notification.Produto.DataCompra,
-                    Categoria = new CategoriaDTO { Id = notification.Produto.Categoria.Id },
-                    Fornecedor = new FornecedorDTO { Id = notification.Produto.Fornecedor.Id },
-                };
+                var produtoDTO = mapper.Map<ProdutoDTO>(notification.Produto);
 
                 switch (notification.Action)
                 {

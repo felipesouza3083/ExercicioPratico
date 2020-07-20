@@ -25,11 +25,11 @@ namespace ExercicioPratico.Services.API.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post(CreateCategoriaCommand command)
+        public async Task<IActionResult> Post(CreateCategoriaCommand command)
         {
             try
             {
-                categoriaApplicationService.Add(command);
+                await categoriaApplicationService.Add(command);
 
                 return Ok(new { Message = "Categoria cadastrada com sucesso." });
             }
@@ -44,11 +44,11 @@ namespace ExercicioPratico.Services.API.Controllers
         }
 
         [HttpPut]
-        public IActionResult Put(UpdateCategoriaCommand command)
+        public async Task<IActionResult> Put(UpdateCategoriaCommand command)
         {
             try
             {
-                categoriaApplicationService.Update(command);
+                await categoriaApplicationService.Update(command);
 
                 return Ok(new { Message = "Categoria Atualizada com sucesso." });
             }
@@ -63,13 +63,13 @@ namespace ExercicioPratico.Services.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public IActionResult Delete(string id)
+        public async Task<IActionResult> Delete(string id)
         {
             try
             {
                 var command = new DeleteCategoriaCommand { Id = id };
 
-                categoriaApplicationService.Remove(command);
+                await categoriaApplicationService.Remove(command);
 
                 return Ok(new { Message = "Categoria excluída com sucesso." });
             }

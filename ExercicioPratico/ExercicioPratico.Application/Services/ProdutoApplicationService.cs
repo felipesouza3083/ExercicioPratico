@@ -6,6 +6,7 @@ using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace ExercicioPratico.Application.Services
 {
@@ -20,19 +21,19 @@ namespace ExercicioPratico.Application.Services
             this.produtoCaching = produtoCaching;
         }
 
-        public void Add(CreateProdutoCommand command)
+        public async Task Add(CreateProdutoCommand command)
         {
-            mediator.Send(command);
+            await mediator.Send(command);
         }
 
-        public void Update(UpdateProdutoCommand command)
+        public async Task Update(UpdateProdutoCommand command)
         {
-            mediator.Send(command);
+            await mediator.Send(command);
         }
 
-        public void Remove(DeleteProdutoCommand command)
+        public async Task Remove(DeleteProdutoCommand command)
         {
-            mediator.Send(command);
+            await mediator.Send(command);
         }
 
         public List<ProdutoDTO> GetAll()

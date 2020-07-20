@@ -25,11 +25,11 @@ namespace ExercicioPratico.Services.API.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post(CreateProdutoCommand command)
+        public async Task<IActionResult> Post(CreateProdutoCommand command)
         {
             try
             {
-                produtoApplicationService.Add(command);
+                await produtoApplicationService.Add(command);
 
                 return Ok(new { Message = "Produto cadastrado com sucesso" });
             }
@@ -44,11 +44,11 @@ namespace ExercicioPratico.Services.API.Controllers
         }
 
         [HttpPut]
-        public IActionResult Put(UpdateProdutoCommand command)
+        public async Task<IActionResult> Put(UpdateProdutoCommand command)
         {
             try
             {
-                produtoApplicationService.Update(command);
+                await produtoApplicationService.Update(command);
 
                 return Ok(new { Message = "Produto ataulizado com sucesso" });
             }
@@ -63,13 +63,13 @@ namespace ExercicioPratico.Services.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public IActionResult Delete(string id)
+        public async Task<IActionResult> Delete(string id)
         {
             try
             {
                 var command = new DeleteProdutoCommand { Id = id };
 
-                produtoApplicationService.Remove(command);
+                await produtoApplicationService.Remove(command);
 
                 return Ok(new { Message = "Produto excluído com sucesso" });
             }

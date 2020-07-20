@@ -1,4 +1,5 @@
-﻿using ExercicioPratico.Application.Notifications;
+﻿using AutoMapper;
+using ExercicioPratico.Application.Notifications;
 using ExercicioPratico.Domain.DTOs;
 using ExercicioPratico.Domain.Interfaces.Caching;
 using MediatR;
@@ -10,28 +11,22 @@ using System.Threading.Tasks;
 
 namespace ExercicioPratico.Application.Handlers
 {
-    public class FornecedorHandler:INotificationHandler<FornecedorNotification>
+    public class FornecedorHandler : INotificationHandler<FornecedorNotification>
     {
         private readonly IFornecedorCaching fornecedorCaching;
+        private readonly IMapper mapper;
 
-        public FornecedorHandler(IFornecedorCaching fornecedorCaching)
+        public FornecedorHandler(IFornecedorCaching fornecedorCaching, IMapper mapper)
         {
             this.fornecedorCaching = fornecedorCaching;
+            this.mapper = mapper;
         }
 
         public Task Handle(FornecedorNotification notification, CancellationToken cancellationToken)
         {
             return Task.Run(() =>
             {
-                var fornecedorDTO = new FornecedorDTO
-                {
-                    Id = notification.Fornecedor.Id,
-                    Nome = notification.Fornecedor.Nome,
-                    Cnpj = notification.Fornecedor.Cnpj,
-                    Email = notification.Fornecedor.Email,
-                    RazaoSocial = notification.Fornecedor.RazaoSocial,
-                    Telefone = notification.Fornecedor.Telefone
-                };
+                var fornecedorDTO = mapper.Map<FornecedorDTO>(notification.Fornecedor);
 
                 switch (notification.Action)
                 {
