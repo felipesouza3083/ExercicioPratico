@@ -53,6 +53,8 @@ namespace ExercicioPratico.Services.API
                 app.UseDeveloperExceptionPage();
             }
 
+            //app.UseHttpsRedirection();
+
             app.UseRouting();
 
             CorsSetup.UseCorsSetup(app);

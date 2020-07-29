@@ -6,6 +6,7 @@ using ExercicioPratico.Application.Commands.Usuarios;
 using ExercicioPratico.Application.Interfaces;
 using ExercicioPratico.Services.API.Adapters;
 using FluentValidation;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualStudio.Web.CodeGeneration.Contracts.Messaging;
@@ -13,6 +14,7 @@ using Microsoft.VisualStudio.Web.CodeGeneration.Contracts.Messaging;
 namespace ExercicioPratico.Services.API.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize]
     [ApiController]
     public class UsuarioController : ControllerBase
     {
@@ -24,6 +26,7 @@ namespace ExercicioPratico.Services.API.Controllers
         }
 
         [HttpPost]
+        [AllowAnonymous]
         public IActionResult Post(CreateUsuarioCommand command)
         {
             try
@@ -43,6 +46,7 @@ namespace ExercicioPratico.Services.API.Controllers
         }
 
         [HttpPost]
+        [AllowAnonymous]
         [Route("Authenticate")]
         public IActionResult Authenticate(AuthenticateUsuarioCommand command)
         {
@@ -62,6 +66,19 @@ namespace ExercicioPratico.Services.API.Controllers
             catch (ValidationException e)
             {
                 return BadRequest(ValidationAdapter.Parse(e.Errors));
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
+        }
+
+        [HttpGet]
+        public IActionResult Get()
+        {
+            try
+            {
+                return Ok(User.Identity.Name);
             }
             catch (Exception e)
             {
